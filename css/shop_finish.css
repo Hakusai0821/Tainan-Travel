@@ -1,0 +1,468 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+html.body {
+    height: 100%;
+    position: relative;
+}
+
+body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 7;
+}
+
+.main-header {
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 10px 10px rgba(192, 192, 192, .5);
+    height: 70px;
+}
+
+.small-header {
+    height: 30px;
+    background-color: rgb(59, 184, 48);
+    line-height: 30px;
+}
+
+.small-header nav {
+    text-align: right;
+    margin-right: 20px;
+}
+
+.small-header nav>a {
+    display: inline-block;
+    padding: 0px 5px;
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+    position: relative;
+    transition: .3s;
+}
+
+.small-header nav>a:hover {
+    color: #e9e9e9;
+}
+
+.small-header nav>a+a::before {
+    content: "";
+    border-left: 1px solid rgb(255, 255, 255);
+    position: absolute;
+    left: -2.5px;
+    bottom: 2px;
+    top: 2px;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.title p {
+    color: rgb(37, 139, 28);
+    font-weight: 700;
+    font-size: 40px;
+    width: 200px;
+    padding-top: 15px;
+}
+
+.nav {
+    display: flex;
+    margin-left: 150px;
+    height: 100%;
+    align-items: center;
+    width: 100%;
+}
+
+.nav li {
+    padding: 0px 50px;
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.nav li>a {
+    font-size: 20px;
+    color: rgb(131, 131, 131);
+    text-decoration: none;
+    transition: .3s;
+    font-weight: 900;
+    font-family: 微軟正黑體;
+    display: flex;
+}
+
+.nav li .fa {
+    font-size: 30px;
+    padding-right: 10px;
+}
+
+.nav li:hover a {
+    transform: translateY(-5px);
+    color: rgb(80, 79, 79);
+}
+
+.nav li+li::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    bottom: 10px;
+    border-left: 2px solid rgb(226, 226, 226);
+    left: 0;
+}
+
+.nav li::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    right: 50%;
+    border-bottom: 5px solid rgb(45, 219, 29);
+    transition: .3s;
+}
+
+.nav li:hover::after {
+    left: 0;
+    right: 0;
+}
+
+main {
+    margin-top: 120px;
+}
+
+.order {
+    margin-bottom: 50px;
+    box-shadow: 0 5px 10px rgb(199, 199, 199);
+    position: relative;
+}
+
+.order::before {
+    content: "訂單資訊";
+    position: absolute;
+    width: 100px;
+    height: 50px;
+    background-color: rgb(43, 177, 31);
+    color: white;
+    top: -35px;
+    left: -5px;
+    font-size: 20px;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+.order_title {
+    display: flex;
+    font-size: 20px;
+    background-color: rgb(240, 243, 243);
+    color: rgb(117, 117, 117);
+}
+
+.order_title .order-price, .order-amount, .order-stotal {
+    text-align: right;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+.order_title .order-name {
+    font-size: 25px;
+    font-weight: 700;
+    margin-top: 25px;
+}
+
+.order-content {
+    display: flex;
+    font-size: 20px;
+    background-color: rgb(240, 243, 243);
+    color: rgb(117, 117, 117);
+    position: relative;
+    padding: 25px 0;
+}
+
+.order-content::before {
+    content: "";
+    position: absolute;
+    border-top: 2px solid rgb(226, 226, 226);
+    left: 10px;
+    right: 10px;
+    top: 10px;
+}
+
+.order-content .order-price2, .order-amount2, .order-stotal2 {
+    text-align: right;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.order-content .order-name2 {
+    display: flex;
+    align-items: center;
+}
+
+.order-name2 .order-img {
+    width: 100px;
+}
+
+.order-name2 .order-img img {
+    max-width: 100px;
+    max-height: 100px;
+}
+
+.order-content .order-name2 p {
+    margin-left: 10px;
+}
+
+.info {
+    margin-bottom: 15px;
+    box-shadow: 0 5px 10px rgb(199, 199, 199);
+}
+
+.orderer-info {
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    color: rgb(117, 117, 117);
+    background-color: rgb(240, 243, 243);
+    justify-content: center;
+    position: relative;
+}
+
+.orderer-info::before {
+    content: "訂單人資訊";
+    position: absolute;
+    width: 120px;
+    height: 50px;
+    background-color: rgb(43, 177, 31);
+    color: white;
+    top: -35px;
+    left: -5px;
+    font-size: 20px;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+.orderer-info::after {
+    content: "";
+    border-right: 3px solid rgb(226, 226, 226);
+    position: absolute;
+    top: 15px;
+    bottom: 15px;
+    right: 25px;
+}
+
+.orderer-info input {
+    width: 300px;
+    padding: 5px;
+    margin: 5px 0 20px;
+    border-radius: 5px;
+    border: 1px solid rgb(182, 182, 182);
+}
+
+.orderer-info input:focus {
+    outline: none;
+}
+
+.orderer-address {
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    color: rgb(117, 117, 117);
+    background-color: rgb(240, 243, 243);
+    padding: 50px 0;
+    position: relative;
+}
+
+.orderer-address::before {
+    content: "收件人地址";
+    position: absolute;
+    width: 120px;
+    height: 50px;
+    background-color: rgb(43, 177, 31);
+    color: white;
+    top: -35px;
+    left: -5px;
+    font-size: 20px;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+.orderer-address input {
+    width: 300px;
+    padding: 5px;
+    margin: 5px 0;
+    border-radius: 5px;
+    border: 1px solid rgb(182, 182, 182);
+}
+
+.orderer-address input:focus {
+    outline: none;
+}
+
+.city, .area, .zip {
+    height: 50px;
+    border: 1px solid rgb(185, 185, 185);
+    margin-right: 10px;
+}
+
+.city:focus, .area:focus, .zip:focus {
+    outline: none;
+}
+
+.goods-content {
+    background-color: rgb(240, 243, 243);
+    width: 100%;
+}
+
+.goods-content .product p {
+    margin-left: 5px;
+}
+
+.goods-content .product .buy_img {
+    width: 100px;
+}
+
+.goods-content .product .buy_img img {
+    max-width: 100px;
+    max-height: 100px;
+}
+
+.goods-content .price1, .amount, .total1, .oper {
+    text-align: right;
+}
+
+.goods-content .amount .amount2 {
+    width: 50px;
+    height: 32px;
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, .09);
+    font-size: 15px;
+}
+
+.goods-content .amount .amount2:focus {
+    outline: none;
+}
+
+.goods-content .amount .btn {
+    display: flex;
+    border: 1px solid rgba(0, 0, 0, .09);
+    font-size: 15px;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+}
+
+.checkout-buy {
+    width: 100%;
+}
+
+.goods-checkout {
+    background-color: rgb(240, 243, 243);
+}
+
+.go-buy {
+    display: flex;
+    justify-content: flex-end;
+    padding: 25px 0;
+}
+
+.go-buy .total_price {
+    margin-right: 10px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.go-buy .total_price .total_price2 {
+    color: rgb(59, 184, 48);
+    font-size: 28px;
+    padding-left: 5px;
+    font-weight: 600;
+}
+
+.go {
+    font-size: 25px;
+    padding: 5px 20px;
+    background-color: #14ae67;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: 700;
+    transition: .3s;
+}
+
+.go:hover {
+    background-color: #129256;
+}
+
+.content {
+    margin-top: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content .tip {
+    font-size: 45px;
+    color: rgb(158, 158, 158);
+    font-weight: 700;
+}
+
+.content .exit {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-size: 20px;
+    background-color: #14ae67;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 10px;
+    font-weight: 500;
+    transition: .3s;
+}
+
+.content .exit:hover {
+    background-color: #129256;
+}
+
+.footer {
+    width: 100%;
+    background-color: rgb(59, 184, 48);
+}
+
+.footer-container {
+    width: 960px;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    padding-top: 10px;
+}
+
+.footer-container h3 {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.copyright {
+    background-color: rgb(64, 161, 55);
+    color: white;
+    text-align: center;
+}

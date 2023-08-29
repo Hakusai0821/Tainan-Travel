@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    background: url("../imgs/a.png");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.register {
+    width: 500px;
+    height: 650px;
+    background-color: rgba(129, 175, 83, .5);
+    border: 3px solid rgb(255, 255, 255);
+    box-shadow: 5px 5px 15px rgb(149, 149, 149);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(3px);
+}
+
+.register form {
+    width: 300px;
+}
+
+.register h1 {
+    color: white;
+    margin-bottom: 40px;
+    text-align: center;
+    font-size: 40px;
+    border-bottom: 1px solid white;
+    padding-bottom: 25px;
+}
+
+.register input {
+    width: 100%;
+    display: block;
+    margin-top: 15px;
+    padding: 10px 5px;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+.register input:focus {
+    outline: none;
+}
+
+.register button {
+    color: white;
+    background-color: #14ae67;
+    font-weight: 600;
+    font-family: "微軟正黑體";
+    border: none;
+    margin-top: 20px;
+    display: block;
+    width: 100%;
+    font-size: 20px;
+    padding: 10px 0;
+    border-radius: 5px;
+}
+
+.register button:hover {
+    background-color: #129256;
+}
+
+.tip_success {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.success {
+    font-size: 60px;
+    font-weight: 900;
+    color: rgb(255, 255, 255);
+}
+
+.login_back {
+    background-color: #14ae67;
+    font-size: 30px;
+    padding: 10px;
+    margin-top: 30px;
+    width: 100px;
+    text-align: center;
+    border-radius: 8px;
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+}
+.login_back:hover {
+    background-color: #129256;
+    color: white;
+}

@@ -1,0 +1,334 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    position: relative;
+}
+
+body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 7;
+}
+
+.main-header {
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 10px 10px rgba(192, 192, 192, .5);
+    height: 70px;
+}
+
+.small-header {
+    height: 30px;
+    background-color: rgb(59, 184, 48);
+    line-height: 30px;
+}
+
+.small-header nav {
+    text-align: right;
+    margin-right: 20px;
+}
+
+.small-header nav>a {
+    display: inline-block;
+    padding: 0px 5px;
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+    position: relative;
+    transition: .3s;
+}
+
+.small-header nav>a:hover {
+    color: #e9e9e9;
+}
+
+.small-header nav>a+a::before {
+    content: "";
+    border-left: 1px solid rgb(255, 255, 255);
+    position: absolute;
+    left: -2.5px;
+    bottom: 2px;
+    top: 2px;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.title p {
+    color: rgb(37, 139, 28);
+    font-weight: 700;
+    font-size: 40px;
+    width: 225px;
+    padding-top: 15px;
+}
+
+.nav {
+    display: flex;
+    margin-left: 150px;
+    height: 100%;
+    align-items: center;
+    width: 100%;
+}
+
+.nav li {
+    padding: 0px 50px;
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.nav li>a {
+    font-size: 20px;
+    color: rgb(131, 131, 131);
+    text-decoration: none;
+    transition: .3s;
+    font-weight: 900;
+    font-family: 微軟正黑體;
+    display: flex;
+}
+
+.nav li .fa {
+    font-size: 30px;
+    padding-right: 10px;
+}
+
+.nav li:hover a {
+    transform: translateY(-5px);
+    color: rgb(80, 79, 79);
+}
+
+.nav li+li::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    bottom: 10px;
+    border-left: 2px solid rgb(226, 226, 226);
+    left: 0;
+}
+
+.nav li::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    right: 50%;
+    border-bottom: 5px solid rgb(45, 219, 29);
+    transition: .3s;
+}
+
+.nav li:hover::after {
+    left: 0;
+    right: 0;
+}
+
+main {
+    margin-top: 100px;
+    display: flex;
+    height: 100%;
+    background-color: rgb(233, 233, 233);
+}
+
+article {
+    margin-top: 50px;
+    margin-left: 100px;
+}
+
+article .member {
+    display: flex;
+    align-items: center;
+}
+
+article .member-name {
+    margin-left: 15px;
+    font-size: 25px;
+}
+
+article .member-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    border: 1px solid rgb(180, 180, 180);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(238, 238, 238);
+    color: rgb(180, 180, 180);
+    overflow: hidden;
+}
+article .member-img img{
+    max-width: 100%;
+}
+
+article a {
+    text-decoration: none;
+    color: black;
+    transition: .3s;
+}
+article a:hover{
+    color: rgb(88, 88, 88);
+}
+
+article h4 {
+    margin-top: 50px;
+}
+
+aside {
+    margin-top: 50px;
+    margin-left: 200px;
+    width: 1380px;
+    display: flex;
+    flex-direction: column;
+    background: white;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+aside h2 {
+    margin: 20px 0 0 20px;
+    position: relative;
+}
+aside h2::before {
+    position: absolute;
+   content: "";
+   border-bottom: 1px solid rgb(214, 214, 214);
+   left:0;
+   right: 0;
+   bottom: -20px;
+}
+aside .username {
+    display: flex;
+    align-items: center;
+    margin: 100px 0 0 100px;
+}
+
+aside .username .name {
+    margin-left: 15px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+aside .update-mamber {
+    margin: 0px 0 0 100px;
+    position: relative;
+}
+aside .update-mamber::after {
+   content: "";
+   border-right: 1px solid rgb(214, 214, 214);
+   left:785px;
+   position: absolute;
+   top: -115px;
+   bottom: -80px;
+}
+
+aside .update-mamber>div {
+    margin-top: 45px;
+}
+
+aside label {
+    color: rgb(98, 98, 98);
+    font-size: 25px;
+    margin-right: 25px;
+    margin-left: 5px;
+}
+
+aside input[type="text"],
+input[type="date"] {
+    font-size: 20px;
+    padding: 10px;
+    width: 690px;
+    border: 1px solid rgb(160, 160, 160);
+}
+
+aside input[type="text"]:focus,
+input[type="date"]:focus {
+    outline: none;
+}
+
+aside .gender {
+    display: flex;
+    align-items: center;
+}
+
+aside .gender>input[type="radio"] {
+    width: 25px;
+    height: 25px;
+}
+
+aside button {
+    font-size: 25px;
+    padding: 5px 25px;
+    margin-top: 45px;
+    color: white;
+    background-color: #14ae67;
+    border: 1px solid rgb(48, 44, 44);
+    border-radius: 5px;
+
+}
+
+aside .preview {
+    position: absolute;
+    top: -100px;
+    left: 800px;
+}
+aside .member-img2 {
+    width: 6.25rem;
+    height: 6.25rem;
+    border-radius: 100%;
+    border: 1px solid rgb(180, 180, 180);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(238, 238, 238);
+    color: rgb(180, 180, 180);
+    overflow: hidden;
+}
+
+aside .member-img2 img {
+    max-width: 100%;
+}
+aside .preview input[type="file"]{
+    margin-top: 25px;
+    background-color: white;
+    color: rgb(158, 158, 158);
+    font-size: 20px;
+}
+.footer {
+    width: 100%;
+    background-color: rgb(59, 184, 48);
+}
+
+.footer-container {
+    width: 960px;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    padding-top: 10px;
+}
+
+.footer-container h3 {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.copyright {
+    background-color: rgb(64, 161, 55);
+    color: white;
+    text-align: center;
+}

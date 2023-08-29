@@ -1,0 +1,90 @@
+
+.warp-img {
+    max-width: 100%;
+    margin-top: 100px;
+}
+
+.warp-img img {
+    width: 100%;
+}
+.txt{
+    padding: 10px;
+    font-weight:bolder;
+    font-size: 25px;
+    font-family: "微軟正黑體";
+}
+.txt h1{
+    font-weight: bolder;
+}
+.attractions {
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 10px rgb(214, 205, 205);
+    flex-direction: column;
+    align-items: flex-start;
+    padding-bottom: 20px;
+    position: relative;
+}
+.attractions::after{
+    content: "";
+    left: 0;
+    right: 0;
+    position: absolute;
+    top: -30px;
+    border-top:30px solid rgb(59, 184, 48);
+}
+.attractions::before{
+    content: "";
+    left: 20px;
+    right: 20px;
+    top: 145px;
+    position: absolute;
+    border-bottom: 1px solid rgb(204, 209, 205);
+}
+.att-search{
+    display: flex;
+    width: 100%;
+}
+
+.att-text{
+padding: 10px 10px;
+outline: none;
+}
+
+.att-btn{
+    background-color:  rgb(59, 184, 48);
+    padding: 10px 20px;
+    color: white;
+    font-size: 25px;
+    border: none;
+}
+.card-group{
+    width: 100%;
+    margin-top: 50px;
+}
+.card-group .row{
+    width: 960px;
+    margin: auto;
+    
+}
+.card-group .card{
+    margin-top: 10px;
+}
+.card img{
+   width: 100%;
+
+}
+.card .txt{
+    text-align: center;
+}
+.card a{
+    text-decoration: none;
+    color:rgb(99, 97, 97);
+}
+.Page{
+    margin: auto;
+    width: 171px;
+    margin-top:50px;
+}
+.page-link{
+    color: black;
+}
